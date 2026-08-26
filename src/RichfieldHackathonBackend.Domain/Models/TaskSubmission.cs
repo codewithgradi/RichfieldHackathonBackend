@@ -9,7 +9,7 @@ public class TaskSubmission : BaseEntity
     public Guid StudentId { get; set; }
     public Student Student { get; set; } = null!;
 
-    public string SubmissionUrl { get; set; } = string.Empty;
+    public ICollection<string> SubmissionUrl { get; set; } = new List<string>() { };
     public SubmissionStatus Status { get; set; } = SubmissionStatus.Submitted;
 
     public Guid? VerifiedByAdminId { get; set; }
