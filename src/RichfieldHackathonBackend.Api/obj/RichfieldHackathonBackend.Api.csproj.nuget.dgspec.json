@@ -36,8 +36,8 @@
               "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Application\\RichfieldHackathonBackend.Application.csproj": {
                 "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Application\\RichfieldHackathonBackend.Application.csproj"
               },
-              "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.Infrastructure.csproj"
+              "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.infrastructure.csproj"
               }
             }
           }
@@ -1187,12 +1187,12 @@
         }
       }
     },
-    "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.Infrastructure.csproj": {
+    "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.Infrastructure.csproj",
-        "projectName": "RichfieldHackathonBackend.Infrastructure",
-        "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.infrastructure.csproj",
+        "projectName": "RichfieldHackathonBackend.infrastructure",
+        "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.infrastructure.csproj",
         "packagesPath": "C:\\Users\\Gradi\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",

@@ -60,7 +60,7 @@
           "bin/placeholder/RichfieldHackathonBackend.Domain.dll": {}
         }
       },
-      "RichfieldHackathonBackend.Infrastructure/1.0.0": {
+      "RichfieldHackathonBackend.infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
@@ -68,10 +68,10 @@
           "RichfieldHackathonBackend.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/RichfieldHackathonBackend.Infrastructure.dll": {}
+          "bin/placeholder/RichfieldHackathonBackend.infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RichfieldHackathonBackend.Infrastructure.dll": {}
+          "bin/placeholder/RichfieldHackathonBackend.infrastructure.dll": {}
         }
       }
     }
@@ -123,17 +123,17 @@
       "path": "../RichfieldHackathonBackend.Domain/RichfieldHackathonBackend.Domain.csproj",
       "msbuildProject": "../RichfieldHackathonBackend.Domain/RichfieldHackathonBackend.Domain.csproj"
     },
-    "RichfieldHackathonBackend.Infrastructure/1.0.0": {
+    "RichfieldHackathonBackend.infrastructure/1.0.0": {
       "type": "project",
-      "path": "../RichfieldHackathonBackend.Infrastructure/RichfieldHackathonBackend.Infrastructure.csproj",
-      "msbuildProject": "../RichfieldHackathonBackend.Infrastructure/RichfieldHackathonBackend.Infrastructure.csproj"
+      "path": "../RichfieldHackathonBackend.Infrastructure/RichfieldHackathonBackend.infrastructure.csproj",
+      "msbuildProject": "../RichfieldHackathonBackend.Infrastructure/RichfieldHackathonBackend.infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.AspNetCore.OpenApi >= 10.0.11",
       "RichfieldHackathonBackend.Application >= 1.0.0",
-      "RichfieldHackathonBackend.Infrastructure >= 1.0.0"
+      "RichfieldHackathonBackend.infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -172,8 +172,8 @@
             "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Application\\RichfieldHackathonBackend.Application.csproj": {
               "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Application\\RichfieldHackathonBackend.Application.csproj"
             },
-            "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.Infrastructure.csproj"
+            "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Infrastructure\\RichfieldHackathonBackend.infrastructure.csproj"
             }
           }
         }
