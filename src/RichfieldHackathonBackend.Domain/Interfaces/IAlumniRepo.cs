@@ -7,6 +7,6 @@ public interface IAlumniRepo
     Task<Alumni> GetAlumniProfileAsync(Guid id);
     Task<Alumni> CreateAlumniProfileAsync(Alumni alumni, Guid userId);
     Task<Alumni> UpdateAlumniProfileAsync(Guid id, Alumni alumni);
-    Task<DomainTask> CreateTaskSuggestionnAsync();
+    Task<DomainTask> CreateTaskSuggestionnAsync(DomainTask task);
 
 }

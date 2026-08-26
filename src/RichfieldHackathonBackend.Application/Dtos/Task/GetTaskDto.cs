@@ -1,5 +1,7 @@
 namespace RichfieldHackathonBackend.Application.Dtos.Task;
 
+using RichfieldHackathonBackend.Application.Dtos.Admin;
+using RichfieldHackathonBackend.Application.Dtos.Alumni;
 using RichfieldHackathonBackend.Application.Dtos.TaskSubmission;
 using RichfieldHackathonBackend.Domain.Enums;
 using RichfieldHackathonBackend.Domain.Models;

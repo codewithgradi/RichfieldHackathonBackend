@@ -6,8 +6,8 @@ public interface IStudentRepo
 {
     Task<ICollection<Student>> GetStudents();
     Task<Student> GetStudentProfileAsync(Guid id);
-    Task<Student> CreateStudentProfileAsync(Student admin, Guid userId);
-    Task<Student> UpdateStudentProfileAsync(Guid id, Student admin);
+    Task<Student> CreateStudentProfileAsync(Student student, Guid userId);
+    Task<Student> UpdateStudentProfileAsync(Guid id, Student student);
     Task<TaskSubmission> CreateTaskSubmissionAsync(TaskSubmission task);
     Task<ICollection<TaskSubmission>> GetAllSubmitedTasks(Guid studentId);
     Task<ICollection<DomainTask>> GetAllTasks();
