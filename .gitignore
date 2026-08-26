@@ -484,3 +484,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+[Db]ebug/
+[Rr]elease/
+obj/
+bin/
