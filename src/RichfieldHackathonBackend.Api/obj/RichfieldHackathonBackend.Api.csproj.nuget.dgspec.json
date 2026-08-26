@@ -552,6 +552,12 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Riok.Mapperly": {
+              "target": "Package",
+              "version": "[5.0.0-next.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

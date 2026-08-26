@@ -4,6 +4,10 @@
     <ProjectReference Include="..\RichfieldHackathonBackend.Domain\RichfieldHackathonBackend.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Riok.Mapperly" Version="5.0.0-next.10" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

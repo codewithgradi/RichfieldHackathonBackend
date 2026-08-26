@@ -2,6 +2,22 @@
   "version": 4,
   "targets": {
     "net10.0": {
+      "Riok.Mapperly/5.0.0-next.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/Riok.Mapperly.targets": {}
+        }
+      },
       "RichfieldHackathonBackend.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -15,6 +31,30 @@
     }
   },
   "libraries": {
+    "Riok.Mapperly/5.0.0-next.10": {
+      "sha512": "bFtga7serPecDcuH/KpKGMKPLFjNeLMzKwecuYPIL4pLNU9vGeCEbJQ2CfvQwXqF3VtHcIy9eyWbkYdoupgnpA==",
+      "type": "package",
+      "path": "riok.mapperly/5.0.0-next.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/roslyn4.11/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.11/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.14/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.14/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.8/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.8/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn5.0/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn5.0/dotnet/cs/Riok.Mapperly.dll",
+        "build/Riok.Mapperly.targets",
+        "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll",
+        "lib/netstandard2.0/Riok.Mapperly.Abstractions.xml",
+        "logo.png",
+        "riok.mapperly.5.0.0-next.10.nupkg.sha512",
+        "riok.mapperly.nuspec"
+      ]
+    },
     "RichfieldHackathonBackend.Domain/1.0.0": {
       "type": "project",
       "path": "../RichfieldHackathonBackend.Domain/RichfieldHackathonBackend.Domain.csproj",
@@ -23,7 +63,8 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "RichfieldHackathonBackend.Domain >= 1.0.0"
+      "RichfieldHackathonBackend.Domain >= 1.0.0",
+      "Riok.Mapperly >= 5.0.0-next.10"
     ]
   },
   "packageFolders": {
@@ -81,6 +122,12 @@
       "net10.0": {
         "framework": "net10.0",
         "targetAlias": "net10.0",
+        "dependencies": {
+          "Riok.Mapperly": {
+            "target": "Package",
+            "version": "[5.0.0-next.10, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

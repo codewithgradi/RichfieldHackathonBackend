@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IQrEP2L4kbI=",
+  "dgSpecHash": "vqDn9nhoWsA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Gradi\\Desktop\\RichfieldHackathonBackend\\src\\RichfieldHackathonBackend.Application\\RichfieldHackathonBackend.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gradi\\.nuget\\packages\\riok.mapperly\\5.0.0-next.10\\riok.mapperly.5.0.0-next.10.nupkg.sha512"
+  ],
   "logs": []
 }
