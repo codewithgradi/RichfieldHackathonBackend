@@ -1,0 +1,6 @@
+@RichfieldHackathonBackend.Api_HostAddress = http://localhost:5093
+
+GET {{RichfieldHackathonBackend.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

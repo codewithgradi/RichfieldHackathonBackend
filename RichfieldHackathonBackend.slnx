@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RichfieldHackathonBackend.Api/RichfieldHackathonBackend.Api.csproj" />
+    <Project Path="src/RichfieldHackathonBackend.Application/RichfieldHackathonBackend.Application.csproj" />
+    <Project Path="src/RichfieldHackathonBackend.Domain/RichfieldHackathonBackend.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/RichfieldHackathonBackend.Infrastructure/">
+    <Project Path="src/RichfieldHackathonBackend.Infrastructure/RichfieldHackathonBackend.infrastructure.csproj" />
+  </Folder>
+</Solution>
