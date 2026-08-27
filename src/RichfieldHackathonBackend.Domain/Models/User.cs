@@ -10,4 +10,7 @@ public class User : BaseEntity
     public Student? Student { get; set; }
     public Alumni? Alumni { get; set; }
     public Admin? Admin { get; set; }
+    public Business? Business { get; set; }
+    public Application? Application { get; set; }
+    public ICollection<Reaction> Reactions { get; set; }
 }

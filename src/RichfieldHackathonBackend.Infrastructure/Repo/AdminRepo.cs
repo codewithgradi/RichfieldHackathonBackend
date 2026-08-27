@@ -1,6 +1,6 @@
 using RichfieldHackathonBackend.Domain.Interfaces;
 using RichfieldHackathonBackend.Domain.Models;
-
+namespace RichfieldHackathonBackend.Infrastructure.Repo;
 public class AdminRepo : IAdminRepo
 {
     public Task<Admin> CreateAdminProfileAsync(Admin admin, Guid userId)

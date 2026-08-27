@@ -1,0 +1,21 @@
+public enum BusinessType
+{
+    Agriculture =1,
+    Mining = 2,
+    Energy = 3,
+    Forestry = 4,
+    Automotive = 5,
+    Aerospace = 6,
+    Construction = 7,
+    Healthcare = 8,
+    Finance = 9,
+    Retail = 10,
+    Hospitality = 11,
+    Education = 12,
+    Quaternary = 13,
+    InformationTechnology = 14,
+    Telecommunications=15,
+   Biotechnology = 17,
+    Research = 18,
+    Development = 19,
+}

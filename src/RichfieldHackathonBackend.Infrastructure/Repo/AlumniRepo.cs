@@ -1,6 +1,6 @@
 using RichfieldHackathonBackend.Domain.Interfaces;
 using RichfieldHackathonBackend.Domain.Models;
-
+namespace RichfieldHackathonBackend.Infrastructure.Repo;
 public class AlumniRepo : IAlumniRepo
 {
     public Task<Alumni> CreateAlumniProfileAsync(Alumni alumni, Guid userId)

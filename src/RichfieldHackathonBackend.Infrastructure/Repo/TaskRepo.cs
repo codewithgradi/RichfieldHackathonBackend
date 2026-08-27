@@ -1,13 +1,14 @@
-using RichfieldHackathonBackend.Domain.Interfaces;
+namespace RichfieldHackathonBackend.Infrastructure.Repo;
 
+using DomainTask = Domain.Models.Task;
 public class TaskRepo : ITaskRepo
 {
-    public Task<RichfieldHackathonBackend.Domain.Models.Task> CreateTaskAsync(RichfieldHackathonBackend.Domain.Models.Task task, Guid userId)
+    public Task<DomainTask> CreateTaskAsync(DomainTask task, Guid userId)
     {
         throw new NotImplementedException();
     }
 
-    public Task<ICollection<RichfieldHackathonBackend.Domain.Models.Task>> GetAllTasks()
+    public Task<ICollection<DomainTask>> GetAllTasks()
     {
         throw new NotImplementedException();
     }

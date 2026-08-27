@@ -1,4 +1,3 @@
-using RichfieldHackathonBackend.Domain.Models;
 namespace RichfieldHackathonBackend.Domain.Models;
 public class Alumni : BaseEntity
 {

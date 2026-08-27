@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using RichfieldHackathonBackend.Infrastructure;
-
+namespace RichfieldHackathonBackend.Infrastructure.Claims;
 
 public class AdditionalUserClaimsPrincipalFactory : UserClaimsPrincipalFactory<AppUser>
 {

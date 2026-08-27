@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RichfieldHackathonBackend.Domain.Models;
+using myApplication = RichfieldHackathonBackend.Domain.Models.Application;
 
 namespace RichfieldHackathonBackend.Infrastructure.Configuration;
 
@@ -17,6 +18,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasIndex(u => u.Email)
             .IsUnique();
 
+        builder.HasMany(x => x.Reactions).WithOne(x => x.User).HasForeignKey(x => x.UserID);
+
         // 1:1 Relationships
         builder.HasOne(u => u.Admin)
             .WithOne(a => a.User)
@@ -32,6 +35,17 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .WithOne(a => a.User)
             .HasForeignKey<Alumni>(a => a.UserId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasOne(x => x.Application)
+        .WithOne(x => x.User)
+        .HasForeignKey<myApplication>(x => x.UserId)
+        .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(x => x.Business)
+        .WithOne(x => x.User)
+        .HasForeignKey<Business>(x => x.UserId)
+        .OnDelete(DeleteBehavior.Restrict);
+
     }
 }
 

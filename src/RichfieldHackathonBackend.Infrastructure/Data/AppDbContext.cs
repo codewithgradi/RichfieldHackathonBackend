@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using RichfieldHackathonBackend.Domain.Models;
 using RichfieldHackathonBackend.Infrastructure;
 using DomainTask = RichfieldHackathonBackend.Domain.Models.Task;
+using myApplication = RichfieldHackathonBackend.Domain.Models.Application;
 
 public class AppDbContext : IdentityDbContext<AppUser, IdentityRole<Guid>, Guid>
 {
@@ -21,6 +22,10 @@ public class AppDbContext : IdentityDbContext<AppUser, IdentityRole<Guid>, Guid>
     public DbSet<Student> Students => Set<Student>();
     public DbSet<DomainTask> Tasks => Set<DomainTask>();
     public DbSet<TaskSubmission> TaskSubmissions => Set<TaskSubmission>();
+    public DbSet<Opportunity> Opportunities => Set<Opportunity>();
+    public DbSet<Business> Businesses => Set<Business>();
+    public DbSet<myApplication> Applications => Set<myApplication>();
+    public DbSet<Reaction> Reactions => Set<Reaction>();
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

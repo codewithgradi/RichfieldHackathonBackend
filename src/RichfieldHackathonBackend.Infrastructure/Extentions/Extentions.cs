@@ -5,12 +5,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.AI;
 using OpenAI;
 using System.ClientModel;
-using RichfieldHackathonBackend.Infrastructure;
 using RichfieldHackathonBackend.Domain.Interfaces;
 using RichfieldHackathonBackend.Application.Services;
 using RichfieldHackathonBackend.Application.Mappings;
 using RichfieldHackathonBackend.Domain.Exceptions;
-namespace simpli.Infrastructure;
+using RichfieldHackathonBackend.Infrastructure.Claims;
+using RichfieldHackathonBackend.Infrastructure.Repo;
+using RichfieldHackathonBackend.Infrastructure;
+namespace Microsoft.Extensions.DependencyInjection;
 
 public static class ServiceExtentions
 {
@@ -25,7 +27,7 @@ public static class ServiceExtentions
         .WithToolsFromAssembly();
         return services;
     }
-   
+
 
     public static IServiceCollection ConfigureSqlDB(this IServiceCollection services, IConfiguration config)
     {
@@ -81,9 +83,12 @@ public static class ServiceExtentions
         services.AddScoped<IAlumniRepo, AlumniRepo>();
         services.AddScoped<ICarrersRepo, CareersRepo>();
         services.AddScoped<ICertificationRepo, CertRepo>();
-        services.AddScoped<IStudentRepo,StudentRepo>();
-        services.AddScoped<ITaskRepo,TaskRepo>();
-        services.AddScoped<ITaskSubRepo,TaskSubRepo>();
+        services.AddScoped<IStudentRepo, StudentRepo>();
+        services.AddScoped<ITaskRepo, TaskRepo>();
+        services.AddScoped<ITaskSubRepo, TaskSubRepo>();
+        services.AddScoped<IBusinessRepo, BusinessRepo>();
+        services.AddScoped<IOpportunityRepo, OpportunityRepo>();
+        services.AddScoped<IApplicationRepo, ApplicationRepo>();
 
         services.AddScoped<AdminService>();
         services.AddScoped<AlumniService>();
@@ -93,17 +98,20 @@ public static class ServiceExtentions
         services.AddScoped<StudentService>();
         services.AddScoped<TaskService>();
         services.AddScoped<TaskSubService>();
+        services.AddScoped<BusinessService>();
+        services.AddScoped<ApplicationService>();
 
         services.AddSingleton<AdminMappers>();
         services.AddSingleton<AlumniMappers>();
         services.AddSingleton<CertificationMappers>();
         services.AddSingleton<CareerMappers>();
         services.AddSingleton<StudentMappers>();
+        services.AddSingleton<BusinessMappers>();
 
 
         return services;
     }
-    public static IServiceCollection AddEnvironmentVariables(this IServiceCollection services)
+    public static IServiceCollection LoadAddEnvironmentVariables(this IServiceCollection services)
     {
         DotNetEnv.Env.TraversePath().Load();
 
@@ -115,25 +123,25 @@ public static class ServiceExtentions
         {
             opt.AddPolicy("AllowNextJs", builder =>
         {
-              var frontendUrlDev = configuration["OtherSettings:FrontEndUrlDev"]?.ToLower().Trim(' ', '"');
-              var frontendUrlProd = configuration["OtherSettings:FrontEndUrlProd"]?.ToLower().Trim(' ', '"');
-              var backendLiveApiLink = configuration["OtherSettings:BackendLiveApiLink"]?.ToLower().Trim(' ', '"');
+            var frontendUrlDev = configuration["OtherSettings:FrontEndUrlDev"]?.ToLower().Trim(' ', '"');
+            var frontendUrlProd = configuration["OtherSettings:FrontEndUrlProd"]?.ToLower().Trim(' ', '"');
+            var backendLiveApiLink = configuration["OtherSettings:BackendLiveApiLink"]?.ToLower().Trim(' ', '"');
 
-              if (string.IsNullOrEmpty(frontendUrlDev) || string.IsNullOrEmpty(frontendUrlProd) || string.IsNullOrEmpty(backendLiveApiLink))
-              {
-                  throw new ReasourceNotFoundException("There are no front-end urls.");
-              }
+            if (string.IsNullOrEmpty(frontendUrlDev) || string.IsNullOrEmpty(frontendUrlProd) || string.IsNullOrEmpty(backendLiveApiLink))
+            {
+                throw new ReasourceNotFoundException("There are no front-end urls.");
+            }
 
-              builder.WithOrigins([frontendUrlDev, frontendUrlProd, backendLiveApiLink])
-          .AllowAnyMethod()
-          .AllowAnyHeader()
-          .AllowCredentials();
-          });
+            builder.WithOrigins([frontendUrlDev, frontendUrlProd, backendLiveApiLink])
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials();
+        });
         });
 
         return services;
     }
-  
+
     public static IServiceCollection AddOpenAI(this IServiceCollection services, IConfiguration configuration)
     {
         string apiKey = configuration["OpenAi:ApiKey"]
@@ -169,4 +177,5 @@ public static class ServiceExtentions
 
         return services;
     }
+    
 }

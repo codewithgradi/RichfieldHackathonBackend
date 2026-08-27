@@ -1,5 +1,6 @@
 using RichfieldHackathonBackend.Domain.Interfaces;
 using RichfieldHackathonBackend.Domain.Models;
+namespace RichfieldHackathonBackend.Infrastructure.Repo;
 
 public class StudentRepo : IStudentRepo
 {
